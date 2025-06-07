@@ -1,5 +1,5 @@
 export async function getEmbedding(text) {
-  const apiUrl = '/api/embed';  // cambio aquí para apuntar a tu serverless
+  const apiUrl = '/api/embed';  
 
   try {
     const response = await fetch(apiUrl, {
