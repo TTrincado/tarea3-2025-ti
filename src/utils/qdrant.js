@@ -1,5 +1,5 @@
 export async function initCollection() {
-  const res = await fetch('/api/qdrant', {
+  const res = await fetch('https://llmhandler.onrender.com/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ action: 'initCollection' }),
@@ -9,7 +9,7 @@ export async function initCollection() {
 }
 
 export async function saveEmbeddings(chunksWithEmbeddings) {
-  const res = await fetch('/api/qdrant', {
+  const res = await fetch('https://llmhandler.onrender.com/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ action: 'saveEmbeddings', payload: { chunksWithEmbeddings } }),
@@ -19,7 +19,7 @@ export async function saveEmbeddings(chunksWithEmbeddings) {
 }
 
 export async function searchSimilarChunks(queryEmbedding, topK) {
-  const res = await fetch('/api/qdrant', {
+  const res = await fetch('https://llmhandler.onrender.com/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ action: 'searchSimilarChunks', payload: { queryEmbedding, topK } }),

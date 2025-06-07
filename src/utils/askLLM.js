@@ -1,8 +1,8 @@
 export async function askLLM(context, question) {
-  const apiUrl = '/api/completions'; 
+  const completionsUrl = 'https://llmhandler.onrender.com/api/completions';
 
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch(completionsUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ context, question }),

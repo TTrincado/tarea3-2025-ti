@@ -1,8 +1,8 @@
 export async function getEmbedding(text) {
-  const apiUrl = '/api/embed';  
+  const embedUrl = 'https://llmhandler.onrender.com/api/embed';
 
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch(embedUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
