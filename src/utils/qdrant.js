@@ -1,4 +1,4 @@
-async function initCollection() {
+export async function initCollection() {
   const res = await fetch('/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -8,7 +8,7 @@ async function initCollection() {
   console.log(data);
 }
 
-async function saveEmbeddings(chunksWithEmbeddings) {
+export async function saveEmbeddings(chunksWithEmbeddings) {
   const res = await fetch('/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -18,7 +18,7 @@ async function saveEmbeddings(chunksWithEmbeddings) {
   console.log(data);
 }
 
-async function searchSimilarChunks(queryEmbedding, topK) {
+export async function searchSimilarChunks(queryEmbedding, topK) {
   const res = await fetch('/api/qdrant', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
