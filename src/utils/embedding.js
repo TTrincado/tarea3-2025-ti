@@ -1,5 +1,5 @@
 export async function getEmbedding(text) {
-  const apiUrl = 'https://asteroide.ing.uc.cl/api/embed';
+  const apiUrl = '/api/embed';  // cambio aquí para apuntar a tu serverless
 
   try {
     const response = await fetch(apiUrl, {
@@ -17,14 +17,15 @@ export async function getEmbedding(text) {
       throw new Error(`Error HTTP: ${response.status}`);
     }
 
-    const result = await response.json(); 
-// {model: "nomic-embed-text", embeddings: Array, total_duration: 125621292, load_duration: 7981402, prompt_eval_count: 113}
-    return result.embeddings
+    const result = await response.json();
+    return result.embeddings;
+
   } catch (error) {
     console.error('Error al generar embedding:', error);
     return null;
   }
 }
+
 
 export async function getEmbeddingsFromChunks(chunks) {
   const embeddings = [];
