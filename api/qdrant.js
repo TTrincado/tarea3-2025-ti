@@ -1,12 +1,13 @@
 import { QdrantClient } from "@qdrant/js-client-rest";
 
 const client = new QdrantClient({
-  url: process.env.VITE_QDRANT_URL,
-  apiKey: process.env.VITE_QDRANT_API_KEY,
+  url: process.env.QDRANT_URL,
+  apiKey: process.env.QDRANT_API_KEY,
 });
 
 const COLLECTION_NAME = "wiki-embeddings";
 
+/** @type {import('@vercel/node').VercelRequestHandler} */
 export default async function handler(req, res) {
   const { method } = req;
   if (method !== "POST") {
