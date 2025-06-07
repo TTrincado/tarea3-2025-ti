@@ -8,7 +8,7 @@ import { getEmbeddingsFromChunks } from './utils/embedding';
 import { getEmbedding } from './utils/embedding';
 import { splitTextIntoChunks } from './utils/langChainSplitter';
 import { askLLM } from './utils/askLLM';
-import { initCollection, saveEmbeddings, searchSimilarChunks } from './utils/Qdrant';
+import { initCollection, saveEmbeddings, searchSimilarChunks } from './utils/qdrant';
 
 const isValidWikipediaUrl = (url) => {
   try {

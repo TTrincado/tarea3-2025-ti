@@ -1,7 +1,6 @@
 {
   "name": "tarea-3-2025-1-ttrincado",
   "private": true,
-  "homepage": "https://TTrincado.github.io/tarea-3-2025-1-TTrincado",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@langchain/core": "^0.3.57",
